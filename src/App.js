@@ -8,12 +8,12 @@ function App() {
 
 
     <Routes>
-      <Route path="/" element={<div className="app"> <Header />
+      <Route path="/amazonclone" element={<div className="app"> <Header />
         <Home />
       </div>
       } />
 
-      <Route path='/checkout' element={
+      <Route path='/amazonclone/checkout' element={
         <>
           <Header />
           <Checkout />

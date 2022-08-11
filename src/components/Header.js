@@ -9,7 +9,7 @@ const Header = () => {
     console.log("i have a", basket)
     return (
         <div className='header'>
-            <Link to="/">
+            <Link to="/amazonclone">
                 <div className='header__logo'>
 
                     <img src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/11/Amazon-Logo-Font-1-scaled.jpg?fit=2560%2C1578&ssl=1" alt="amazon logo" />
@@ -36,7 +36,7 @@ const Header = () => {
 
                 <div className="header__option">
                     <div>
-                        <Link to="/checkout">
+                        <Link to="/amazonclone/checkout">
                             <span className='header__option1' >
                                 <ShoppingCartIcon className="carticon" />
                             </span>
