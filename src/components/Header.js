@@ -2,15 +2,24 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from "react-router-dom"
+import { useStateValue } from "./StateProvider"
 const Header = () => {
+    const [{ basket }, dispatch] = useStateValue();
+    console.log("i have a", basket)
     return (
         <div className='header'>
-            <div className='header__logo'>
-                <img src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/11/Amazon-Logo-Font-1-scaled.jpg?fit=2560%2C1578&ssl=1" alt="amazon logo" />
-            </div>
+            <Link to="/">
+                <div className='header__logo'>
+
+                    <img src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/11/Amazon-Logo-Font-1-scaled.jpg?fit=2560%2C1578&ssl=1" alt="amazon logo" />
+
+                </div>
+            </Link>
 
             <div className='header__search'>
-                <input type="text" className="header__searchinput" />
+                <input type="text" className="header__searchinput"
+                    placeholder='Search in Amazon' autoFocus />
                 <SearchIcon className="header__searchicon" />
             </div>
 
@@ -27,8 +36,12 @@ const Header = () => {
 
                 <div className="header__option">
                     <div>
-                        <span className='header__option1' ><ShoppingCartIcon /></span>
-                        <span className='header__option2'>0</span>
+                        <Link to="/checkout">
+                            <span className='header__option1' >
+                                <ShoppingCartIcon className="carticon" />
+                            </span>
+                        </Link>
+                        <span className='header__option2'>{basket?.length}</span>
                     </div>
                 </div>
 

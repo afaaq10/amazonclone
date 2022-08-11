@@ -16,6 +16,9 @@
   object-fit: contain;
   cursor: pointer;
 }
+.header__logo > img:hover {
+  transform: scale(1.1);
+}
 .header__search {
   display: flex;
   flex: 1;
@@ -32,10 +35,14 @@
 }
 
 .header__searchicon {
-  height: 30px !important;
+  height: 36px !important;
   background-color: #cd9042;
   padding: 2px;
   color: black !important;
+  cursor: pointer;
+}
+.header__searchicon:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
 .header__nav {
@@ -51,11 +58,23 @@
 .header__option1 {
   font-size: 13px;
   height: 12px;
+}
+.carticon {
+  color: white;
+}
+.carticon:hover {
+  transform: scale(1.5);
+}
+.header__option1:hover {
+  transform: scale(1.3);
   cursor: pointer;
 }
 .header__option2 {
   font-size: 15px;
   font-weight: bold;
   margin-top: 2px;
+}
+.header__option2:hover {
+  transform: scale(1.3);
   cursor: pointer;
 }
