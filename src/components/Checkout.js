@@ -31,6 +31,7 @@ const Checkout = () => {
                         />
                     )}
                 </div>
+                {basket.length == 0 ? <img style={{ display: "flex", backgroundColor: "white", margin: "auto" }} src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="" /> : ""}
             </div>
 
             <div className="checkout__right">
@@ -39,6 +40,10 @@ const Checkout = () => {
 
 
             </div>
+
+
+
+
 
         </div>
     )

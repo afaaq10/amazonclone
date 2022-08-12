@@ -19,6 +19,7 @@ const CheckoutProduct = ({ id, img, title, price, rating }) => {
 
 
         })
+        // if (basket.length == 0) return <h2>"Nothing to preview"</h2>
 
         setTimeout(() => {
 
